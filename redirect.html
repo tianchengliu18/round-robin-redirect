@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Redirecting...</title>
+<script>
+const LINKS = [
+    "https://www.baidu.com/" ,
+    "https://www.bing.com/" ,
+    "https://www.google.com/" ,
+    "https://yeezy.com/"
+];
+const count = parseInt(localStorage.getItem('rrCount') || 0);
+localStorage.setItem('rrCount', count + 1);
+const url = LINKS[count % LINKS.length];
+window.location.replace(url);
+</script>
+</head>
+<body>
+Redirecting…
+</body>
+</html>
